@@ -27,12 +27,11 @@ namespace ConsoleApp1
 
             Console.Write("Введіть натуральне число: ");
             uint num = uint.Parse(Console.ReadLine());
-            uint numCopy = num;
             uint sum = 0, counter = 0;
-            while (numCopy != 0) 
+            while (num != 0) 
             {
-                sum += numCopy % 10;
-                numCopy /= 10;
+                sum += num % 10;
+                num /= 10;
                 counter++;
             }
             double average = (double)sum / (double)counter;
@@ -58,7 +57,7 @@ namespace ConsoleApp1
             double b = 1 - mySqrt;
             double c = Math.Sin(myDiv) + Math.Cos(Math.PI / 4);
             Console.WriteLine($"\na: {a}\nb: {b}\nc: {c}");
-            return Math.Max(a, b) < c ? c : Math.Max(a, b);
+            return Math.Max(a, b) < c ? c : Math.Max(a, b); //повертає найбільше із a, b, c
         }
 
         static void Task_3()
